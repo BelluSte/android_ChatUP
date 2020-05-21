@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChatUP</string>
+    <string name="chatup">ChatUP</string>
+    <string name="icona_app">logo</string>
+    <string name="password">Password</string>
+    <string name="non_sei_ancora_registrato">Non sei ancora registrato?</string>
+    <string name="registrati">Registrati</string>
+    <string name="simbolo_password">simbolo password</string>
+    <string name="simbolo_nome">simbolo nome</string>
+    <string name="login">Accedi</string>
+    <string name="name">Nome</string>
+</resources>

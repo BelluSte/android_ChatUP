@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChatUP</string>
+    <string name="chatup">ChatUP</string>
+    <string name="icona_app">logo</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="simbolo_password">password symbol</string>
+    <string name="simbolo_nome">simbolo nome</string>
+    <string name="non_sei_ancora_registrato">Not registered yet?</string>
+    <string name="registrati">Sign In</string>
+</resources>
