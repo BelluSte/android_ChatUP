@@ -5,9 +5,10 @@
     <string name="login">Login</string>
     <string name="name">Name</string>
     <string name="password">Password</string>
-    <string name="login">Login</string>
     <string name="simbolo_password">password symbol</string>
-    <string name="simbolo_nome">simbolo nome</string>
+    <string name="simbolo_nome">name symbol</string>
     <string name="non_sei_ancora_registrato">Not registered yet?</string>
     <string name="registrati">Sign In</string>
+    <string name="conferma_password">Confirm Password</string>
+    <string name="already_registered">Already registered?</string>
 </resources>

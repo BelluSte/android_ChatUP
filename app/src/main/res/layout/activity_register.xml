@@ -5,7 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:autofillHints=""
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/conferma_password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/passwordForm"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
         android:id="@+id/peopleForm"
@@ -50,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/login"
+        android:text="@string/registrati"
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -82,43 +101,16 @@
         android:id="@+id/btSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@android:color/holo_orange_light"
-        android:onClick="clickLogin"
-        android:text="@string/login"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <TextView
-        android:id="@+id/domanda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/non_sei_ancora_registrato"
+        android:onClick="clickSignIn"
+        android:text="@string/registrati"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/accedi"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btSignIn" />
-
-    <TextView
-        android:id="@+id/accedi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="clickRegistrati"
-        android:text="@string/registrati"
-        android:textColor="@android:color/holo_orange_light"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/domanda"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/domanda" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password2"
+        app:layout_constraintVertical_bias="0.296" />
 
     <EditText
         android:id="@+id/name"
@@ -137,4 +129,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toEndOf="@+id/peopleForm" />
+
+    <TextView
+        android:id="@+id/domanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_registered"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accedi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSignIn" />
+
+    <TextView
+        android:id="@+id/accedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="clickLogin"
+        android:text="@string/login"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/domanda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/domanda" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
