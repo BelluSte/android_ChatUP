@@ -11,4 +11,11 @@
     <string name="login">Accedi</string>
     <string name="name">Nome</string>
     <string name="conferma_password">Conferma Password</string>
+    <string name="already_registered">Già registrato?</string>
+    <string name="email">Email</string>
+    <string name="simbolo_email">simbolo email</string>
+    <string name="registrazione_successo" >Registrazione avvenuta con successo</string>
+    <string name="registrazione_errore">Errore nella registrazione. Per favore riprovare</string>
+    <string name="error">Errore</string>
+    <string name="messaggio_errore_reg">Verifica che:\n- NOME sia di almeno 6 caratteri\n- EMAIL sia corretta\n- PASSWORD sia di almeno 8 caratteri e contenga un numero</string>
 </resources>

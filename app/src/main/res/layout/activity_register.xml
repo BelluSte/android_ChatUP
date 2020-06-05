@@ -8,11 +8,11 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/password2"
+        android:id="@+id/passwordReg2"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:autofillHints=""
         android:background="@android:color/background_light"
@@ -21,70 +21,66 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/passwordForm"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordReg" />
 
     <ImageView
         android:id="@+id/peopleForm"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="16dp"
         android:contentDescription="@string/simbolo_nome"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.114"
         app:srcCompat="@drawable/ic_form_people" />
 
     <ImageView
         android:id="@+id/passwordForm"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
         android:contentDescription="@string/simbolo_password"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordReg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/peopleForm"
         app:srcCompat="@drawable/ic_form_lock" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:contentDescription="@string/icona_app"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_logo_white" />
 
     <TextView
         android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/registrati"
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordReg"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:autofillHints=""
         android:background="@android:color/background_light"
@@ -93,27 +89,30 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/passwordForm"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/passwordForm" />
+        app:layout_constraintStart_toEndOf="@+id/passwordForm"
+        app:layout_constraintTop_toBottomOf="@+id/emailReg" />
 
     <Button
         android:id="@+id/btSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_light"
-        android:onClick="clickSignIn"
+        android:onClick="clickSignUp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/registrati"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordReg2"
         app:layout_constraintVertical_bias="0.296" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/nameReg"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginStart="5dp"
@@ -125,6 +124,7 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="@+id/peopleForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
@@ -157,5 +157,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/domanda" />
+
+    <EditText
+        android:id="@+id/emailReg"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:autofillHints=""
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/emailForm"
+        app:layout_constraintTop_toBottomOf="@+id/nameReg" />
+
+    <ImageView
+        android:id="@+id/emailForm"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/simbolo_email"
+        app:layout_constraintBottom_toBottomOf="@+id/emailReg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_form_mail" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

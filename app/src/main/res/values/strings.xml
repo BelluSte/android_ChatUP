@@ -2,13 +2,19 @@
     <string name="app_name">ChatUP</string>
     <string name="chatup">ChatUP</string>
     <string name="icona_app">logo</string>
-    <string name="login">Login</string>
+    <string name="login">Log in</string>
     <string name="name">Name</string>
     <string name="password">Password</string>
     <string name="simbolo_password">password symbol</string>
     <string name="simbolo_nome">name symbol</string>
     <string name="non_sei_ancora_registrato">Not registered yet?</string>
-    <string name="registrati">Sign In</string>
+    <string name="registrati">Sign Up</string>
     <string name="conferma_password">Confirm Password</string>
     <string name="already_registered">Already registered?</string>
+    <string name="email">Email</string>
+    <string name="simbolo_email">email symbol</string>
+    <string name="registrazione_successo">New user correctly registered</string>
+    <string name="registrazione_errore">Registration error. Try again, please</string>
+    <string name="error">Error</string>
+    <string name="messaggio_errore_reg">Verify that:\n- NAME is at least 6 characters long\n- EMAIL is correct\n- PASSWORD is at least 8 characters long and contains a number</string>
 </resources>

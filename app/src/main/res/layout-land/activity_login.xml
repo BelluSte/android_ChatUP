@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.18"
         app:srcCompat="@drawable/ic_form_people" />
 
     <ImageView
@@ -25,7 +26,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/simbolo_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/peopleForm"
@@ -35,14 +36,13 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:contentDescription="@string/icona_app"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031"
+        app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/ic_logo_white" />
 
     <TextView
@@ -53,12 +53,11 @@
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -73,6 +72,7 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="@+id/passwordForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/passwordForm" />
@@ -83,6 +83,8 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_light"
         android:onClick="clickLogin"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/login"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
@@ -132,8 +134,16 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="@+id/peopleForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toEndOf="@+id/peopleForm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
 </androidx.constraintlayout.widget.ConstraintLayout>

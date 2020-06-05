@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "455565336870",
+    "firebase_url": "https://chatup-5b4c3.firebaseio.com",
+    "project_id": "chatup-5b4c3",
+    "storage_bucket": "chatup-5b4c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455565336870:android:186a5d128564a0030a61e7",
+        "android_client_info": {
+          "package_name": "belluste.chatup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455565336870-v2p1a6eq8c5kkbm3ljsnmi37tlo1intk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "belluste.chatup",
+            "certificate_hash": "ac4a2f87373ca3d3332b43ff179023f9dd84fb53"
+          }
+        },
+        {
+          "client_id": "455565336870-c4rb2ftb18f7kpi40u2pn2j698osa9j3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmDNbQKWZ_NRg-u325e1teIH7xf45u7aw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455565336870-c4rb2ftb18f7kpi40u2pn2j698osa9j3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
