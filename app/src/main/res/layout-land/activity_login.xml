@@ -122,7 +122,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/emailLogin"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginStart="5dp"

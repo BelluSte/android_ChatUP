@@ -17,4 +17,6 @@
     <string name="registrazione_errore">Registration error. Try again, please</string>
     <string name="error">Error</string>
     <string name="messaggio_errore_reg">Verify that:\n- NAME is at least 6 characters long\n- EMAIL is correct\n- PASSWORD is at least 8 characters long and contains a number</string>
+    <string name="login_errore">Log in failed. Check entered data</string>
+    <string name="log_out">Log out</string>
 </resources>

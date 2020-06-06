@@ -18,4 +18,6 @@
     <string name="registrazione_errore">Errore nella registrazione. Per favore riprovare</string>
     <string name="error">Errore</string>
     <string name="messaggio_errore_reg">Verifica che:\n- NOME sia di almeno 6 caratteri\n- EMAIL sia corretta\n- PASSWORD sia di almeno 8 caratteri e contenga un numero</string>
+    <string name="login_errore">Log in fallito. Verificare dati inseriti</string>
+    <string name="log_out">Log out</string>
 </resources>

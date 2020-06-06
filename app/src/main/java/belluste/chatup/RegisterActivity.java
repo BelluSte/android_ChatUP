@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -41,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
     }
 
     public void clickSignUp(View view) {
@@ -63,8 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(RegisterActivity.this, R.string.registrazione_successo, Toast.LENGTH_LONG).show();
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent main = new Intent(RegisterActivity.this, MainActivity.class);
-                            startActivity(main);
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(RegisterActivity.this, R.string.registrazione_errore, Toast.LENGTH_LONG).show();
@@ -73,8 +75,28 @@ public class RegisterActivity extends AppCompatActivity {
                 });
     }
 
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            UserProfileChangeRequest addName = new UserProfileChangeRequest.Builder().setDisplayName(mNome.getText().toString()).build();
+            user.updateProfile(addName).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Log.i("add_name_to_user", "addName_success");
+                    } else {
+                        Log.i("add_name_to_user", "addName_error");
+                    }
+                }
+            });
+            Intent main = new Intent(RegisterActivity.this, MainActivity.class);
+            finish();
+            startActivity(main);
+        }
+    }
+
     public void clickLogin(View view) {
         Intent login = new Intent(this, LoginActivity.class);
+        finish();
         startActivity(login);
     }
 
